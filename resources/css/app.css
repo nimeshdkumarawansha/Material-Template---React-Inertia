@@ -1,0 +1,26 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+@import url('../js/src/css/styles.css');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,500');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
+@import url('https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp');
+
+/* Default styles for the drawer */
+#layoutDrawer_content {
+    /* Add your styles for the drawer here */
+    transition: transform 0.3s ease; /* Optional: Add a transition effect */
+}
+
+/* Styles for the drawer when it's toggled */
+body.drawer-toggled #layoutDrawer_content {
+    transform: translateX(-100%); /* Adjust the value based on your design */
+}
+
+/* Media query to hide the drawer when the width is less than LG (992px) */
+@media (max-width: 992px) {
+    body.drawer-toggled #layoutDrawer_content {
+        transform: translateX(0);
+    }
+}

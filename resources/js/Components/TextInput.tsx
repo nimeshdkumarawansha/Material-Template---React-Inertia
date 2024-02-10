@@ -14,14 +14,14 @@ export default forwardRef(function TextInput(
         if (isFocused) {
             localRef.current?.focus();
         }
-    }, []);
+    }, [isFocused]);
 
     return (
         <input
             {...props}
             type={type}
             className={
-                'border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm ' +
+                'form-control focus:border-indigo-500 focus-ring-indigo-500 rounded-md shadow-sm ' +
                 className
             }
             ref={localRef}
